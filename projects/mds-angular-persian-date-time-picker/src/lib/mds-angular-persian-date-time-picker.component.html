@@ -1,4 +1,4 @@
-﻿<div *ngIf="inLine" class="datepicker-box">
+﻿<div *ngIf="inLine" class="datepicker-box"  [ngClass]="position">
   <lib-mds-datetime-picker-core *ngIf="inLine" [rangeSelector]="rangeSelector" [persianChar]="persianChar"
     [isPersian]="isPersian" [timePicker]="timePicker" [format]="format" [templateType]="templateType" #mdsDateTimePickerCore
     (dateChanged)="dateChangedHandler($event)" (rangeDateChanged)="rangeDateChangedHandler($event)">
@@ -15,7 +15,7 @@
       </span>
     </span>
   </mat-form-field>
-  <div class="datepicker" [hidden]="!showDatePicker">
+  <div class="datepicker"  [ngClass]="position" [hidden]="!showDatePicker">
     <lib-mds-datetime-picker-core #mdsDateTimePickerCore [rangeSelector]="rangeSelector" [persianChar]="persianChar"
       [isPersian]="isPersian" [timePicker]="timePicker" [format]="format" [templateType]="2" (dateChanged)="dateChangedHandler($event)"
       (rangeDateChanged)="rangeDateChangedHandler($event)">
@@ -33,7 +33,7 @@
   </div>
   <input type="text" *ngIf="textBoxType == 2" [placeholder]="placeHolder" class="form-control" [formControl]="myControl" (focus)="dateTimeTextBoxOnFocusHandler($event)"
     (blur)="dateTimeTextBoxOnBlurHandler($event)" (keyup)="dateTimeTextBoxOnKeyupHandler($event)" data-mds-persian-datetimepicker>
-  <div class="datepicker datepicker-bootstrap" [hidden]="!showDatePicker">
+  <div class="datepicker datepicker-bootstrap"  [ngClass]="position" [hidden]="!showDatePicker">
     <lib-mds-datetime-picker-core #mdsDateTimePickerCore [rangeSelector]="rangeSelector" [persianChar]="persianChar"
       [isPersian]="isPersian" [timePicker]="timePicker" [format]="format" [templateType]="1" (dateChanged)="dateChangedHandler($event)"
       (rangeDateChanged)="rangeDateChangedHandler($event)">

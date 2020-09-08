@@ -89,7 +89,7 @@ export class MdsAngularPersianDateTimePickerComponent implements ControlValueAcc
 
   //#region Input OutPut
 
-
+@Input() position:string='bottom';
   /**
    * از بوت استرپ استفاده شود یا متریال
    * TemplateTypeEnum
